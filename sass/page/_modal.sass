@@ -1,0 +1,223 @@
+.modal
+  &-overlay
+    visibility: hidden
+    opacity: 0
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 150
+    background-color: rgba(169, 169, 169, 0.9)
+    transition: opacity 0.3s
+    &-visible
+      visibility: visible
+      opacity: 1
+  &-dialog
+    height: 90vh
+    visibility: hidden
+    opacity: 0
+    width: 1500px
+    overflow: auto
+    position: fixed
+    top: 50%
+    left: 50%
+
+    border-radius: 10px
+    background-color: #242424
+    z-index: 151
+    transform: translate(-50%, -50%)
+    transition: opacity 0.3s
+    &-visible
+      visibility: visible
+      opacity: 1
+  &-close
+    position: absolute
+    top: 30px
+    right: 50px
+    text-decoration: none
+    cursor: pointer
+
+  &-top
+    padding: 30px 215px 68px 50px
+    background-color: #323232
+    display: flex
+    align-items: end
+    justify-content: space-between
+    &__title
+      font-style: normal
+      font-weight: 700
+      font-size: 55px
+      line-height: 63px
+      color: #FFFFFF
+    &__subtitle
+      font-style: normal
+      font-weight: 400
+      font-size: 20px
+      line-height: 150%
+      color: #FFFFFF
+      max-width: 834px
+      margin-top: 21px
+  &-bottom
+    padding: 50px 50px 50px 50px
+    display: flex
+    justify-content: space-between
+  &-prog
+    max-width: 967px
+    &__title
+      font-style: normal
+      font-weight: 700
+      font-size: 55px
+      line-height: 63px
+      color: #FFFFFF
+
+    &__titlemin
+      font-style: normal
+      font-weight: 500
+      font-size: 32px
+      line-height: 37px
+      color: #FFFFFF
+      margin-top: 50px
+    &__block
+      margin-top: 50px
+
+  &-block
+    &__title
+      font-style: normal
+      font-weight: 500
+      font-size: 28px
+      line-height: 32px
+      color: #FFFFFF
+      background-color: #323232
+      padding: 20px 0 25px 25px
+      border-radius: 15px 15px 0 0
+      cursor: pointer
+    &__subtitle
+      font-style: normal
+      font-weight: 400
+      font-size: 16px
+      line-height: 18px
+      color: #FFFFFF
+      border-right: 5px solid #323232
+      border-left: 5px solid #323232
+      padding-left: 30px
+      padding-top: 25px
+      padding-bottom: 20px
+
+    &__ul
+      border-right: 5px solid #323232
+      border-left: 5px solid #323232
+      border-bottom: 5px solid #323232
+      border-radius: 0 0 15px 15px
+      padding-bottom: 25px
+
+    &__li
+      font-style: normal
+      font-weight: 400
+      font-size: 16px
+      line-height: 18px
+      color: #FFFFFF
+      margin-left: 30px
+      padding-top: 5px
+      padding-bottom: 5px
+      margin-left: 55px
+  &-learn
+    display: flex
+    flex-direction: column
+    width: 290px
+
+    &__title
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 18px
+      color: #FFFFFF
+      margin-top: 40px
+    &__subtitle
+      font-style: normal
+      font-weight: 300
+      font-size: 16px
+      line-height: 18px
+      color: #FFFFFF
+      margin-top: 18px
+    &__block
+      align-items: start
+      justify-content: space-between
+      display: flex
+      flex-wrap: wrap
+
+  &-promo
+    margin-left: 15px
+    border-radius: 10px
+    padding: 25px 40px
+    background-color: #343434
+    width: 320px
+    height: 400px
+    &__sale
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &-text
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        line-height: 29px
+        text-decoration-line: line-through
+        color: #FFFFFF
+    &__info
+      margin-top: 30px
+      &-price
+        font-style: normal
+        font-weight: 500
+        font-size: 32px
+        line-height: 37px
+        color: #FFFFFF
+      &-li
+        width: 190px
+        font-style: normal
+        font-weight: 300
+        font-size: 12px
+        line-height: 14px
+        color: #FFFFFF
+        margin-top: 10px
+      &-ul
+        margin-top: 15px
+        margin-left: 15px
+      &-button
+        width: 100%
+        padding: 14px 0
+        border-radius: 8px
+        background-color: $accent
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 21px
+        text-align: center
+        color: #242424
+        margin-top: 25px
+
+details summary::-webkit-details-marker
+  display: none
+
+details > summary
+  list-style: none
+
+*
+  scrollbar-width: thin
+  scrollbar-color: #242424#AB69F7
+
+*::-webkit-scrollbar
+  height: 12px
+  width: 12px
+
+*::-webkit-scrollbar-track
+  background: #242424
+
+*::-webkit-scrollbar-thumb
+  background-color: #AB69F7
+  border-radius: 5px
+  border: 3px solid #242424
+@media (max-width: 1510px)
+  .modal
+    &-dialog
+      width: 95%

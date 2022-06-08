@@ -1,0 +1,80 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  background-color: #242424
+  font-family: 'Ubuntu', sans-serif
+
+button
+  outline: none
+  border: none
+  cursor: pointer
+
+input,textarea
+  &:active
+    outline: none
+  &:focus
+    outline: none
+.container
+  max-width: 1680px
+  margin: 0 auto
+
+.accent
+  color: $accent
+
+.swiper-pagination-bullet
+  width: 10px
+  height: 10px
+.swiper-pagination-bullet-active
+  width: 25px
+  border-radius: 5px
+
+.line-block
+  position: relative
+  overflow: hidden
+  font-size: 115px
+  font-weight: normal
+  text-align: center
+.data-line
+  display: inline-block
+  margin: 0
+  font-style: normal
+  font-weight: 700
+  font-size: 70px
+  line-height: 80px
+  color: #FFFFFF
+
+.data-line:before,
+.data-line:after
+  content: ""
+  position: absolute
+  width: 100%
+  border-top: 2px solid $accent
+  margin-top: 0.6em
+.data-line:before
+  margin-left: -102%
+
+.data-line:after
+  margin-left: 2%
+
+.line
+  border: none
+  outline: none
+  color: $accent
+  height: 2px
+
+.active
+  display: flex !important
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  position: absolute
+  top: 100px
+  bottom: 0
+  right: 0
+  left: 0
+  width: 100%
+  text-align: center
+  background-color: #242424
